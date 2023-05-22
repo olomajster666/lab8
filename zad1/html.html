@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+<title>siema zenia</title>
+<script type = "text/javascript" src=js.js></script>
+
+</head>
+
+<body>
+    <form id="formularz">
+        <p>Imie: </p>
+        <input id="imie" name="imie" /></br> 
+
+        <p>Nazwisko: </p>
+        <input id="nazwisko" name="nazwisko" /></br>
+
+        <p>Email: </p>
+        <input id="mail" name="email" /></br>
+
+        <p>Haslo: </p>
+        <input id="haslo" name="haslo" type="password"/>
+		
+		<p>Powtórz Haslo: </p>
+        <input id="haslo2" name="haslo2" type="password"/>
+		
+        <p>Plec: </p>
+        <input id="plec" type="radio" id="m" name="plec" checked />
+        <label for="m">M</label><br>
+        <input id="plec" type="radio" id="f" name="plec"/>
+        <label for="f">F</label><br></br>
+
+        <p>telefon: </p>
+        <input id="tel" name="telefon" type="number" /></br>
+
+        <p>data: </p>
+        <input id="data" name="data" type="date" /></br>
+
+        <p>kraj: </p>
+        <select id="kraj" name="kraj" onchange="hide1()">
+            <option></option>
+            <option value="polska">Polska</option>
+            <option value="niemcy">Niemcy</option>
+            <option value="ukraina">Ukraina</option>
+		</select></br>
+		
+		<div id="1" style="display:none;">
+		
+		<p>Województwo:</p>
+		<input id="wojewodztwo" disabled onblur="hide2()"/></br>
+			<div id="2" style="display:none;">
+			
+			<p>Adres zamieszkania:</p>
+			<input id="adreszam" disabled /></br></br>
+			
+			<input type="checkbox" checked id="same" disabled onchange="hide3()">Adres korespondencyjny jest taki sam jak Adres zamieszkania</input>
+			
+				<div id="3" style="display:none;">
+				<p>Adres korespondencyjny:</p>
+				<input id="adreskor" disabled /></br>
+				</div>
+				
+			</div>	
+		
+		</div>
+        <button onclick="validateForm()">Submit</button>
+ 
+
+    </form>
+</body>
+
+</html>
